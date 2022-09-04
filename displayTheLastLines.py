@@ -20,4 +20,5 @@ if len(sys.argv) == 3:
 
 else:
     print("Wrong number of commands inputted.")
+    print("Please input First argument: file, Second argument: last N lines")
     
