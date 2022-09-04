@@ -2,18 +2,14 @@ import sys
 import os
 
 
-try:
+if len(sys.argv) == 3:
     if(str(sys.argv[2]).isdigit()):
         try:
             with open(sys.argv[1],"r+") as file:
                 try:
-        
-                
                     last_lines = file.readlines()
                     for x in range(-int(sys.argv[2]),0):
-                        print(last_lines[x])
-    
-                
+                        print(last_lines[x])  
                 except Exception:
                     print("Invalid second argument. File contains lines less than " + str(sys.argv[2]))
             
@@ -22,6 +18,6 @@ try:
     else:
         print("Invalid second argument. Argument is not a number.")
 
-except Exception:
-    print("Command Line argument ommitted.")
+else:
+    print("Wrong number of commands inputted.")
     
